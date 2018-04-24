@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/lect28.unity
+- path: Assets/lect29.unity
   isLoaded: 1
   isActive: 1
