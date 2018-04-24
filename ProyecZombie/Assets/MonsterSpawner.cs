@@ -9,7 +9,7 @@ public class MonsterSpawner : MonoBehaviour
 
 	void Start () 
 	{
-		obj = gameObject.CreatePrimitive (primitiveType);
+	//	obj = gameObject.CreatePrimitive (primitiveType);
 	}
 
 	void Update () 
