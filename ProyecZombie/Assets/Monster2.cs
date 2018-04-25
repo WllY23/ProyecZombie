@@ -4,17 +4,43 @@ using UnityEngine;
 
 public class Monster2 : MonoBehaviour
 {
-	public float spacing;
-	public int id;
+
+	public enum MonsterState
+	{
+		standing, wandering, chasing, attacking
+	}
+
+	public MonsterState mState;
+
 	void Start () 
 	{
-		Debug.Log ("Im alive!");
+		mState = MonsterState.standing;
+//		mState = MonsterState.attacking;
+//		int number = (int)mState;
+//		Debug.Log (number);
 	}
 
 	void Update ()
 	{
-		float wave = Mathf.Sin (Time.fixedTime + id);
-		transform.position = new Vector3 (id * spacing, wave, 0);
+		if(mState == MonsterState.standing)
+		{
+			Debug.Log ("stading monster is stadong.");
+		}
+
+		if(mState == MonsterState.wandering)
+		{
+			Debug.Log ("wandering monster is wandering.");
+		}
+
+		if(mState == MonsterState.chasing)
+		{
+			Debug.Log ("chasing monster is chasing.");
+		}
+
+		if(mState == MonsterState.attacking)
+		{
+			Debug.Log ("attacking monster is attacking.");
+		}
 	}
 
 }

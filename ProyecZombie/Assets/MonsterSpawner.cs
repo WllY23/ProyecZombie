@@ -9,15 +9,28 @@ public class MonsterSpawner : MonoBehaviour
 
 	void Start () 
 	{
-	//	obj = gameObject.CreatePrimitive (primitiveType);
+		obj = GameObject.CreatePrimitive (primitiveType);
+		if (myColor == colorType.red)
+		{
+			obj.GetComponent<Renderer> ().material.color = Color.red;
+		}
+
+		if (myColor == colorType.blue)
+		{
+			obj.GetComponent<Renderer> ().material.color = Color.blue;
+		}
+
+		if (myColor == colorType.green)
+		{
+			obj.GetComponent<Renderer> ().material.color = Color.green;
+		}
 	}
 
-	void Update () 
+	public enum colorType
 	{
+		red, blue, green
 	}
+
+	public colorType myColor;
 		
-	public enum PrimitiveType
-	{
-		Sphere, Capsule, Cilinder, Cube, Plane
-	}
 }
